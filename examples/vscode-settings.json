@@ -1,0 +1,105 @@
+{
+  "case_id": "vs_settings",
+  "mode": "documentary",
+  "environment": {
+    "product": "Visual Studio Code",
+    "version": "1.123.2",
+    "os": "Windows 11 Pro build 26300",
+    "language": "en",
+    "context": "独立测试配置，禁用扩展，默认设置编辑器，普通用户工作区"
+  },
+  "old_version": "1.25 至 1.27 的默认行为变更",
+  "goal": "打开用户设置文件 settings.json",
+  "origin": "根据微软 1.25、1.27 发布说明改写的旧操作摘要",
+  "sources": [
+    {
+      "id": "ui",
+      "kind": "screenshot",
+      "fact": "隔离工作区可见。Ctrl+, 打开图形设置。F1 搜索 Open User Settings (JSON) 后，按 Enter 出现 settings.json 和 JSON 文本。",
+      "scope": {
+        "product": "Visual Studio Code",
+        "version": "1.123.2",
+        "os": "Windows 11 Pro build 26300",
+        "language": "en",
+        "context": "独立测试配置，禁用扩展，默认设置编辑器，普通用户工作区"
+      },
+      "reviewed": true,
+      "url": null
+    },
+    {
+      "id": "doc",
+      "kind": "official",
+      "fact": "1.27 将图形设置编辑器设为默认，并保留打开用户 JSON 的命令。",
+      "scope": null,
+      "reviewed": true,
+      "url": "https://code.visualstudio.com/updates/v1_27"
+    },
+    {
+      "id": "doc2",
+      "kind": "official",
+      "fact": "1.25 将新图形设置编辑器作为可选体验。",
+      "scope": null,
+      "reviewed": true,
+      "url": "https://code.visualstudio.com/updates/v1_25"
+    },
+    {
+      "id": "doc3",
+      "kind": "official",
+      "fact": "当前说明列出用于打开用户设置 JSON 的命令。",
+      "scope": null,
+      "reviewed": true,
+      "url": "https://code.visualstudio.com/docs/configure/settings"
+    }
+  ],
+  "steps": [
+    {
+      "intent": "进入项目",
+      "original": "在 VS Code 打开项目工作区。",
+      "expected": "资源管理器显示项目名。",
+      "assessment": "unchanged",
+      "precondition": "软件已打开，对应测试窗口可见",
+      "reason": "本机已显示测试工作区 GuidePatch-Demo。",
+      "candidate": [],
+      "risk": "low",
+      "conflict": false,
+      "goal_preserved": true,
+      "refs": [
+        "ui",
+        "doc"
+      ],
+      "id": "s1"
+    },
+    {
+      "intent": "查看用户设置源文件",
+      "original": "按 Ctrl+,，在打开的编辑器里查看用户设置 JSON。",
+      "expected": "可见用户的 settings.json。",
+      "assessment": "changed",
+      "precondition": "软件已打开，对应测试窗口可见",
+      "reason": "快捷键在本机打开设置表单，工作区这一步可以保留。",
+      "candidate": [
+        {
+          "action": "按 F1，在命令面板搜索 Open User Settings (JSON)。",
+          "expected": "列表显示 Preferences: Open User Settings (JSON)。",
+          "refs": [
+            "ui"
+          ]
+        },
+        {
+          "action": "选中这条命令并按 Enter。",
+          "expected": "编辑器标题是 settings.json，正文为 JSON。",
+          "refs": [
+            "ui"
+          ]
+        }
+      ],
+      "risk": "low",
+      "conflict": false,
+      "goal_preserved": true,
+      "refs": [
+        "ui",
+        "doc"
+      ],
+      "id": "s2"
+    }
+  ]
+}

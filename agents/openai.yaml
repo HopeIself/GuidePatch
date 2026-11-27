@@ -1,0 +1,4 @@
+interface:
+  display_name: "GuidePatch 教程复活师"
+  short_description: "定位旧软件教程中失效的步骤，用界面证据给出最小修复并逐步核验。"
+  default_prompt: "请用 $guidepatch 对照我的旧操作步骤和当前界面，告诉我哪一步需要改、接下来做什么。"

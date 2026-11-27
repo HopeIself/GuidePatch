@@ -1,0 +1,93 @@
+{
+  "case_id": "partial_change",
+  "mode": "simulation",
+  "environment": {
+    "product": "Demo Studio (fictional)",
+    "version": "2.0",
+    "os": "Windows 11",
+    "language": "zh-CN",
+    "context": "default profile"
+  },
+  "old_version": "1.0",
+  "goal": "进入导出设置",
+  "origin": "原创虚构测试夹具",
+  "sources": [
+    {
+      "id": "screen1",
+      "kind": "screenshot",
+      "fact": "模拟：主页仍有设置入口",
+      "scope": {
+        "product": "Demo Studio (fictional)",
+        "version": "2.0",
+        "os": "Windows 11",
+        "language": "zh-CN",
+        "context": "default profile"
+      },
+      "url": null,
+      "reviewed": true
+    },
+    {
+      "id": "screen2",
+      "kind": "screenshot",
+      "fact": "模拟：设置页含输出菜单及导出参数入口",
+      "scope": {
+        "product": "Demo Studio (fictional)",
+        "version": "2.0",
+        "os": "Windows 11",
+        "language": "zh-CN",
+        "context": "default profile"
+      },
+      "url": null,
+      "reviewed": true
+    }
+  ],
+  "steps": [
+    {
+      "id": "step_01",
+      "intent": "打开设置",
+      "original": "点击设置",
+      "expected": "设置页可见",
+      "precondition": "已打开应用且可见当前界面",
+      "assessment": "unchanged",
+      "risk": "low",
+      "conflict": false,
+      "goal_preserved": true,
+      "refs": [
+        "screen1"
+      ],
+      "candidate": [],
+      "reason": "依据提供的界面观察与目标进行比较"
+    },
+    {
+      "id": "step_02",
+      "intent": "进入导出参数",
+      "original": "点击高级设置",
+      "expected": "导出参数页可见",
+      "precondition": "已打开应用且可见当前界面",
+      "assessment": "changed",
+      "risk": "low",
+      "conflict": false,
+      "goal_preserved": true,
+      "refs": [
+        "screen2"
+      ],
+      "candidate": [
+        {
+          "action": "选择输出菜单",
+          "expected": "输出菜单可见",
+          "refs": [
+            "screen2"
+          ]
+        },
+        {
+          "action": "选择导出参数",
+          "expected": "导出参数页可见",
+          "refs": [
+            "screen2"
+          ]
+        }
+      ],
+      "reason": "依据提供的界面观察与目标进行比较"
+    }
+  ]
+}

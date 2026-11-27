@@ -1,0 +1,665 @@
+[
+  {
+    "case_id": "partial_change",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "打开设置",
+        "original": "点击设置",
+        "expected": "设置页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "unchanged",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen1"
+        ],
+        "candidate": [],
+        "reason": "依据提供的界面观察与目标进行比较"
+      },
+      {
+        "id": "step_02",
+        "intent": "进入导出参数",
+        "original": "点击高级设置",
+        "expected": "导出参数页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [
+          {
+            "action": "选择输出菜单",
+            "expected": "输出菜单可见",
+            "refs": [
+              "screen2"
+            ]
+          },
+          {
+            "action": "选择导出参数",
+            "expected": "导出参数页可见",
+            "refs": [
+              "screen2"
+            ]
+          }
+        ],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "unchanged",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "打开设置",
+        "original": "点击设置",
+        "expected": "设置页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "unchanged",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen1"
+        ],
+        "candidate": [],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "all_changed",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_02",
+        "intent": "进入导出参数",
+        "original": "点击高级设置",
+        "expected": "导出参数页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [
+          {
+            "action": "选择输出菜单",
+            "expected": "输出菜单可见",
+            "refs": [
+              "screen2"
+            ]
+          },
+          {
+            "action": "选择导出参数",
+            "expected": "导出参数页可见",
+            "refs": [
+              "screen2"
+            ]
+          }
+        ],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "insufficient",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "进入导出参数",
+        "original": "点击高级设置",
+        "expected": "导出参数页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "unknown",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [],
+        "candidate": [],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "removed",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "进入旧功能",
+        "original": "选择旧功能入口",
+        "expected": "旧功能可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "removed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "risk",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "处理数据",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "处理数据",
+        "original": "清除所有数据",
+        "expected": "数据已清空",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "review",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [
+          {
+            "action": "清空数据",
+            "expected": "数据已清空",
+            "refs": [
+              "screen2"
+            ]
+          }
+        ],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "conflict",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "2.0",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_02",
+        "intent": "进入导出参数",
+        "original": "点击高级设置",
+        "expected": "导出参数页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": true,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [
+          {
+            "action": "选择输出菜单",
+            "expected": "输出菜单可见",
+            "refs": [
+              "screen2"
+            ]
+          },
+          {
+            "action": "选择导出参数",
+            "expected": "导出参数页可见",
+            "refs": [
+              "screen2"
+            ]
+          }
+        ],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "version_unknown",
+    "mode": "simulation",
+    "environment": {
+      "product": "Demo Studio (fictional)",
+      "version": "unknown",
+      "os": "Windows 11",
+      "language": "zh-CN",
+      "context": "default profile"
+    },
+    "old_version": "1.0",
+    "goal": "进入导出设置",
+    "origin": "原创虚构测试夹具",
+    "sources": [
+      {
+        "id": "screen1",
+        "kind": "screenshot",
+        "fact": "模拟：主页仍有设置入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      },
+      {
+        "id": "screen2",
+        "kind": "screenshot",
+        "fact": "模拟：设置页含输出菜单及导出参数入口",
+        "scope": {
+          "product": "Demo Studio (fictional)",
+          "version": "2.0",
+          "os": "Windows 11",
+          "language": "zh-CN",
+          "context": "default profile"
+        },
+        "url": null,
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_02",
+        "intent": "进入导出参数",
+        "original": "点击高级设置",
+        "expected": "导出参数页可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "screen2"
+        ],
+        "candidate": [
+          {
+            "action": "选择输出菜单",
+            "expected": "输出菜单可见",
+            "refs": [
+              "screen2"
+            ]
+          },
+          {
+            "action": "选择导出参数",
+            "expected": "导出参数页可见",
+            "refs": [
+              "screen2"
+            ]
+          }
+        ],
+        "reason": "依据提供的界面观察与目标进行比较"
+      }
+    ]
+  },
+  {
+    "case_id": "vscode_127",
+    "mode": "documentary",
+    "environment": {
+      "product": "Visual Studio Code",
+      "version": "1.27",
+      "os": "Windows",
+      "language": "en-US",
+      "context": "default profile"
+    },
+    "old_version": "1.25",
+    "goal": "查看用户 settings.json（只读查看）",
+    "origin": "根据 VS Code 1.25 和 1.27 官方发布说明构造的迁移案例，非用户截图或真实用户测试",
+    "sources": [
+      {
+        "id": "release125",
+        "kind": "official",
+        "fact": "VS Code 1.25 release notes describe a preview settings editor.",
+        "scope": null,
+        "url": "https://code.visualstudio.com/updates/v1_25",
+        "reviewed": true
+      },
+      {
+        "id": "release127",
+        "kind": "official",
+        "fact": "VS Code 1.27 release notes say GUI settings became default; Preferences: Open User Settings (JSON) still opens JSON settings.",
+        "scope": {
+          "product": "Visual Studio Code",
+          "version": "1.27",
+          "os": "Windows",
+          "language": "en-US",
+          "context": "default profile"
+        },
+        "url": "https://code.visualstudio.com/updates/v1_27",
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "打开用户 JSON 配置",
+        "original": "使用默认设置编辑器打开 JSON 配置",
+        "expected": "用户 JSON 配置可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "release127"
+        ],
+        "candidate": [
+          {
+            "action": "打开命令面板并选择 Preferences: Open User Settings (JSON)",
+            "expected": "用户 JSON 配置可见",
+            "refs": [
+              "release127"
+            ]
+          }
+        ],
+        "reason": "版本发布说明证实设置编辑器默认行为变化"
+      }
+    ]
+  },
+  {
+    "case_id": "chrome_downloads",
+    "mode": "documentary",
+    "environment": {
+      "product": "Google Chrome",
+      "version": "unknown",
+      "os": "Windows",
+      "language": "en-US",
+      "context": "default profile"
+    },
+    "old_version": "unknown",
+    "goal": "查看已下载文件列表",
+    "origin": "依据 Chrome 官方帮助构造的待核验案例，非真实旧笔记或用户截图",
+    "sources": [
+      {
+        "id": "chromehelp",
+        "kind": "official",
+        "fact": "Chrome 官方帮助说明，可在工具栏下载托盘查看近期下载，也可使用 More > Downloads 查看列表。",
+        "scope": null,
+        "url": "https://support.google.com/chrome/answer/95759",
+        "reviewed": true
+      }
+    ],
+    "steps": [
+      {
+        "id": "step_01",
+        "intent": "查看下载列表",
+        "original": "从旧版底部下载栏查看下载",
+        "expected": "下载列表可见",
+        "precondition": "已打开应用且可见当前界面",
+        "assessment": "changed",
+        "risk": "low",
+        "conflict": false,
+        "goal_preserved": true,
+        "refs": [
+          "chromehelp"
+        ],
+        "candidate": [
+          {
+            "action": "打开 More 菜单并选择 Downloads",
+            "expected": "下载列表可见",
+            "refs": [
+              "chromehelp"
+            ]
+          }
+        ],
+        "reason": "当前官方资料提供候选路径，但实际版本未知"
+      }
+    ]
+  }
+]
